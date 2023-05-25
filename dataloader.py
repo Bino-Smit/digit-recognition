@@ -25,7 +25,7 @@ def loadtrain():
     df.drop('label', axis=1, inplace=True)
     label = label1.to_numpy()
     train = df.to_numpy()
-    train=train.astype(np.float)
+    train=train.astype(float)
     arr = np.zeros((len(df),10))
     for i in range(len(df)):
         arr[i][label[i]]=1
